@@ -27,5 +27,10 @@ D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.csproj.Up2Date
 D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.exe
 D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.pdb
 D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmRegister.resources
-D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.SampleAdd.resources
-D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.SampleView.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmUser.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmHome.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCategory.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmProduct.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCashierMain.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCashierOrder.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCashierCustomer.resources

@@ -1,12 +1,69 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Users\\Bong\\LTCSDL\\POS_System\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|d:\\users\\bong\\ltcsdl\\pos_system\\pos_system\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|d:\\users\\bong\\ltcsdl\\pos_system\\pos_system\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|d:\\users\\bong\\ltcsdl\\pos_system\\pos_system\\frmhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\frmhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmMain.cs",
+              "RelativeDocumentMoniker": "POS_System\\frmMain.cs",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmMain.cs*",
+              "RelativeToolTip": "POS_System\\frmMain.cs*",
+              "ViewState": "AgIAADEAAAAAAAAAAAArwEgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T02:07:48.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmMain.cs",
+              "RelativeDocumentMoniker": "POS_System\\frmMain.cs",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmMain.cs [Design]*",
+              "RelativeToolTip": "POS_System\\frmMain.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T02:07:07.276Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmHome.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmHome.cs",
+              "RelativeDocumentMoniker": "POS_System\\frmHome.cs",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmHome.cs [Design]",
+              "RelativeToolTip": "POS_System\\frmHome.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T02:06:58.144Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

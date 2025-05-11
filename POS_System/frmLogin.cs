@@ -52,9 +52,26 @@ namespace POS_System
 
                         if (table.Rows.Count > 0)
                         {
-                            frmMain frmMain = new frmMain();
-                            frmMain.ShowDialog();
-                            this.Hide();
+                            string username = table.Rows[0]["username"].ToString();
+                            string role = table.Rows[0]["role"].ToString().ToLower();
+                            if (role == "admin")
+                            {
+                                frmMain frmMain = new frmMain(username);
+                                frmMain.ShowDialog();
+                                this.Hide();
+                            }
+                            else if(role =="cashier")
+                            {
+                                frmCashierMain frmCashierMain = new frmCashierMain(username);
+                                frmCashierMain.ShowDialog();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Unknown role. Contact admin.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                this.Show();
+                            }
+                            
                         }
                         else
                         {

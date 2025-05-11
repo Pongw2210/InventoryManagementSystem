@@ -10,20 +10,21 @@ using System.Windows.Forms;
 
 namespace POS_System
 {
-    public partial class SampleView : Sample
+    public partial class frmCashierCustomer : Sample
     {
-        public SampleView()
+        public frmCashierCustomer()
         {
             InitializeComponent();
-        }
-        public virtual void  btnAdd_Click(object sender, EventArgs e)
-        {
-
+            displayCustomer();
         }
 
-        public virtual void txtSearch_TextChanged(object sender, EventArgs e)
+        public void displayCustomer()
         {
+            Customer customer = new Customer();
 
+            List<Customer> customers = customer.GetAllCustomers();
+
+            dgvCus.DataSource= customers;
         }
     }
 }
