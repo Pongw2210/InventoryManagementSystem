@@ -7,6 +7,10 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.Net.NetworkInformation;
+
 
 namespace POS_System
 {
@@ -419,7 +423,7 @@ namespace POS_System
         {
             IDGenerator();
 
-            if (txtAmount_Oder.Text == "" || dgvOrders.Rows.Count == 0)
+            if (txtAmount_Oder.Text == ""||lbChange_Order.Text=="0.00" || dgvOrders.Rows.Count == 0)
             {
                 MessageBox.Show("Something went wrong", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -452,6 +456,56 @@ namespace POS_System
                                 MessageBox.Show("Paid successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 clearFields();
 
+                                foreach (DataGridViewRow row in dgvOrders.Rows)
+                                {
+                                    string prodId = row.Cells["prod_id_order"].Value.ToString();
+                                    string prodName = row.Cells["prod_name_order"].Value.ToString();
+                                    int qty = Convert.ToInt32(row.Cells["qty"].Value);
+
+                                    string updateSql = "UPDATE Products SET stock=stock-@qty WHERE prod_id=@prod_id";
+                                    using (SqlCommand updateCmd = new SqlCommand(updateSql, connect))
+                                    {
+                                        updateCmd.Parameters.AddWithValue("@qty", qty);
+                                        updateCmd.Parameters.AddWithValue("@prod_id", prodId);
+
+                                        updateCmd.ExecuteNonQuery();
+
+                                        string selectStockSql = "SELECT prod_name, stock FROM Products WHERE prod_id = @prod_id";
+                                        using (SqlCommand stockCmd = new SqlCommand(selectStockSql, connect))
+                                        {
+                                            stockCmd.Parameters.AddWithValue("@prod_id", prodId);
+                                            using (SqlDataReader reader = stockCmd.ExecuteReader())
+                                            {
+                                                if (reader.Read())
+                                                {
+                                                    string prodNameMail = reader["prod_name"].ToString();
+                                                    int currentStock = Convert.ToInt32(reader["stock"]);
+
+                                                    if (currentStock < 20) 
+                                                    {
+                                                        SendLowStockAlert(prodId, prodNameMail, currentStock);
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                    string insertOrderSql = "INSERT INTO OrderDetails VALUES(@prod_id,@prod_name,@customer_id, @qty, @order_date)";
+                                    using(SqlCommand insertOrderCmd = new SqlCommand(insertOrderSql, connect))
+                                    {
+                                        insertOrderCmd.Parameters.AddWithValue("@prod_id", prodId);
+                                        insertOrderCmd.Parameters.AddWithValue("@prod_name", prodName);
+                                        insertOrderCmd.Parameters.AddWithValue("@customer_id", idGen);
+                                        insertOrderCmd.Parameters.AddWithValue("@qty", qty);
+                                        insertOrderCmd.Parameters.AddWithValue("@order_date", today);
+
+                                        insertOrderCmd.ExecuteNonQuery();
+
+                                    }
+
+                                }
+
                             }
                         }
                         catch (Exception ex)
@@ -464,9 +518,6 @@ namespace POS_System
                 }
             }
             displayTotalPrice();
-
-            txtAmount_Oder.Text = "";
-            lbChange_Order.Text = "";
 
         }
 
@@ -608,6 +659,28 @@ namespace POS_System
             y = e.MarginBounds.Bottom - labelMargin - labelFont.GetHeight(e.Graphics);
             e.Graphics.DrawString(labelText, labelFont, Brushes.Black, e.MarginBounds.Right -
                 e.Graphics.MeasureString("--------------------", labelFont).Width, y);
+        }
+
+        private void SendLowStockAlert(string prodId,string prodName, int stock)
+        {
+            try
+            {
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("pongw.2210@gmail.com");
+                mailMessage.To.Add("2254052006bong@ou.edu.vn");
+                mailMessage.Subject = "Low Stock Alert";
+                mailMessage.Body = $"Product '{prodName}' (ID: {prodId}) is low on stock. Remaining: {stock} items.";
+
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587); // dùng Gmail
+                smtp.Credentials = new NetworkCredential("pongw.2210@gmail.com", "naok eohy xcrk qlup"); 
+                smtp.EnableSsl = true;
+
+                smtp.Send(mailMessage);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to send alert email: " + ex.Message, "Email Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
     }

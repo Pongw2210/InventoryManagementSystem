@@ -34,3 +34,4 @@ D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmProduct.resou
 D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCashierMain.resources
 D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCashierOrder.resources
 D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmCashierCustomer.resources
+D:\Users\Bong\LTCSDL\POS_System\POS_System\obj\Debug\POS_System.frmStatistic.resources
