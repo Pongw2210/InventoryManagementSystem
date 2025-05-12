@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace POS_System
 {
@@ -285,10 +286,16 @@ namespace POS_System
                             }
 
                             byte[] imageBytes = null;
-                            using (MemoryStream ms = new MemoryStream())
+                            if (pbxImage_AddProd.Image != null)
                             {
-                                pbxImage_AddProd.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                imageBytes = ms.ToArray();
+                                using (MemoryStream ms = new MemoryStream())
+                                {
+                                    using (Bitmap bmp = new Bitmap(pbxImage_AddProd.Image)) // tao ban sao cua anh hien tai co trong pbx
+                                    {
+                                        bmp.Save(ms, ImageFormat.Jpeg);
+                                        imageBytes = ms.ToArray();
+                                    }
+                                }
                             }
 
                             // Cập nhật dữ liệu

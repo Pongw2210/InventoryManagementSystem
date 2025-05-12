@@ -34,6 +34,9 @@ namespace POS_System
 
             List<Customer> customers = customer.GetAllCustomersToday();
 
+            //if (customers == null)
+            //    return;
+
             dgvCusToday.DataSource = customers;
         }
 
@@ -110,9 +113,13 @@ namespace POS_System
                         DateTime today = DateTime.Today;
                         cmd.Parameters.AddWithValue("@date", today);
 
-                        var num =Convert.ToSingle( cmd.ExecuteScalar());
+                        
+                        if (cmd.ExecuteScalar() != DBNull.Value)
+                        {
+                            var num = Convert.ToSingle(cmd.ExecuteScalar());
+                            lbTodayIncome.Text = "$" + num.ToString("0.00");
+                        }
 
-                        lbTodayIncome.Text = "$"+num.ToString("0.00");
                     }
                 }
                 catch (Exception ex)

@@ -32,15 +32,16 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnMax = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCategories = new Guna.UI2.WinForms.Guna2Button();
             this.lbUser = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
+            this.btnSuppliers = new Guna.UI2.WinForms.Guna2Button();
             this.btnStatistics = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnCus = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCategories = new Guna.UI2.WinForms.Guna2Button();
             this.btnProducts = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -86,6 +87,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderRadius = 60;
+            this.guna2Panel2.Controls.Add(this.btnSuppliers);
             this.guna2Panel2.Controls.Add(this.btnStatistics);
             this.guna2Panel2.Controls.Add(this.btnLogout);
             this.guna2Panel2.Controls.Add(this.btnUsers);
@@ -104,48 +106,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(213, 685);
             this.guna2Panel2.TabIndex = 6;
-            // 
-            // btnUsers
-            // 
-            this.btnUsers.Animated = true;
-            this.btnUsers.AutoRoundedCorners = true;
-            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnUsers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnUsers.CheckedState.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.ForeColor = System.Drawing.Color.White;
-            this.btnUsers.Location = new System.Drawing.Point(12, 407);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(180, 45);
-            this.btnUsers.TabIndex = 8;
-            this.btnUsers.Text = "Users";
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
-            // 
-            // btnCategories
-            // 
-            this.btnCategories.Animated = true;
-            this.btnCategories.AutoRoundedCorners = true;
-            this.btnCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btnCategories.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnCategories.CheckedState.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCategories.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategories.ForeColor = System.Drawing.Color.White;
-            this.btnCategories.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCategories.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCategories.Location = new System.Drawing.Point(12, 254);
-            this.btnCategories.Name = "btnCategories";
-            this.btnCategories.Size = new System.Drawing.Size(180, 45);
-            this.btnCategories.TabIndex = 4;
-            this.btnCategories.Text = "Categories";
-            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // lbUser
             // 
@@ -189,6 +149,29 @@
             this.centerPanel.Size = new System.Drawing.Size(1000, 685);
             this.centerPanel.TabIndex = 7;
             // 
+            // btnSuppliers
+            // 
+            this.btnSuppliers.Animated = true;
+            this.btnSuppliers.AutoRoundedCorners = true;
+            this.btnSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnSuppliers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSuppliers.CheckedState.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnSuppliers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuppliers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSuppliers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSuppliers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSuppliers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppliers.ForeColor = System.Drawing.Color.White;
+            this.btnSuppliers.Image = global::POS_System.Properties.Resources.Supplier;
+            this.btnSuppliers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSuppliers.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnSuppliers.Location = new System.Drawing.Point(17, 336);
+            this.btnSuppliers.Name = "btnSuppliers";
+            this.btnSuppliers.Size = new System.Drawing.Size(180, 45);
+            this.btnSuppliers.TabIndex = 11;
+            this.btnSuppliers.Text = "Suppliers";
+            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
+            // 
             // btnStatistics
             // 
             this.btnStatistics.Animated = true;
@@ -202,7 +185,10 @@
             this.btnStatistics.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnStatistics.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStatistics.ForeColor = System.Drawing.Color.White;
-            this.btnStatistics.Location = new System.Drawing.Point(12, 458);
+            this.btnStatistics.Image = global::POS_System.Properties.Resources.stat;
+            this.btnStatistics.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnStatistics.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnStatistics.Location = new System.Drawing.Point(17, 438);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(180, 45);
             this.btnStatistics.TabIndex = 10;
@@ -223,12 +209,36 @@
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = global::POS_System.Properties.Resources.logout1;
-            this.btnLogout.Location = new System.Drawing.Point(9, 556);
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Location = new System.Drawing.Point(17, 569);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(180, 45);
             this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "Logout";
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Animated = true;
+            this.btnUsers.AutoRoundedCorners = true;
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnUsers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnUsers.CheckedState.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUsers.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.White;
+            this.btnUsers.Image = global::POS_System.Properties.Resources.User;
+            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnUsers.Location = new System.Drawing.Point(17, 387);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(180, 45);
+            this.btnUsers.TabIndex = 8;
+            this.btnUsers.Text = "Users";
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnCus
             // 
@@ -244,13 +254,38 @@
             this.btnCus.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCus.ForeColor = System.Drawing.Color.White;
             this.btnCus.Image = global::POS_System.Properties.Resources.cus1;
+            this.btnCus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCus.Location = new System.Drawing.Point(15, 356);
+            this.btnCus.Location = new System.Drawing.Point(17, 285);
             this.btnCus.Name = "btnCus";
             this.btnCus.Size = new System.Drawing.Size(180, 45);
             this.btnCus.TabIndex = 6;
             this.btnCus.Text = "Customers";
             this.btnCus.Click += new System.EventHandler(this.btnCus_Click);
+            // 
+            // btnCategories
+            // 
+            this.btnCategories.Animated = true;
+            this.btnCategories.AutoRoundedCorners = true;
+            this.btnCategories.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnCategories.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnCategories.CheckedState.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnCategories.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCategories.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCategories.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCategories.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCategories.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategories.ForeColor = System.Drawing.Color.White;
+            this.btnCategories.Image = global::POS_System.Properties.Resources.cate;
+            this.btnCategories.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCategories.ImageOffset = new System.Drawing.Point(5, 0);
+            this.btnCategories.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnCategories.Location = new System.Drawing.Point(17, 183);
+            this.btnCategories.Name = "btnCategories";
+            this.btnCategories.Size = new System.Drawing.Size(180, 45);
+            this.btnCategories.TabIndex = 4;
+            this.btnCategories.Text = "Categories";
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // btnProducts
             // 
@@ -266,8 +301,9 @@
             this.btnProducts.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducts.ForeColor = System.Drawing.Color.White;
             this.btnProducts.Image = global::POS_System.Properties.Resources.product;
+            this.btnProducts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProducts.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnProducts.Location = new System.Drawing.Point(12, 305);
+            this.btnProducts.Location = new System.Drawing.Point(17, 234);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(180, 45);
             this.btnProducts.TabIndex = 3;
@@ -290,9 +326,9 @@
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = global::POS_System.Properties.Resources.Home11;
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnHome.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHome.Location = new System.Drawing.Point(12, 203);
+            this.btnHome.Location = new System.Drawing.Point(17, 132);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.White;
             this.btnHome.Size = new System.Drawing.Size(180, 45);
@@ -351,5 +387,6 @@
         private System.Windows.Forms.Panel centerPanel;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnStatistics;
+        private Guna.UI2.WinForms.Guna2Button btnSuppliers;
     }
 }

@@ -158,7 +158,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.txtSearch_AddCate);
             this.panel2.Controls.Add(this.dgvCates);
             this.panel2.Controls.Add(this.label5);
@@ -296,7 +295,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.btnClear_AddCate);
             this.panel1.Controls.Add(this.btnUpdate_AddCate);
             this.panel1.Controls.Add(this.btnRemove_AddCate);

@@ -186,8 +186,7 @@ namespace POS_System
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Connection failed: " + ex.Message,
-                                                                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Connection failed: " + ex.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         finally { connect.Close(); }
                     }

@@ -77,5 +77,10 @@ namespace POS_System
         {
             AddForm(new frmStatistic());
         }
+
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            AddForm(new frmSupplier());
+        }
     }
 }
