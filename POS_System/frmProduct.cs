@@ -24,6 +24,7 @@ namespace POS_System
             connect = new SqlConnection(cnStr);
             displayCategories();
             displayAllProducts();
+            displaySuppliers();
         }
 
         private bool checkConnection()
@@ -61,6 +62,38 @@ namespace POS_System
                             while (reader.Read())
                             {
                                 cbxCate_AddProd.Items.Add(reader["category"].ToString());
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Connection failed: " + ex.Message,
+                                        "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally { connect.Close(); }
+            }
+        }
+
+        private void displaySuppliers()
+        {
+            if (checkConnection())
+            {
+                try
+                {
+                    connect.Open();
+
+                    string selectSql = "SELECT * FROM Suppliers";
+
+                    using (SqlCommand cmd = new SqlCommand(selectSql, connect))
+                    {
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                cbxSupplier.Items.Add(reader["name"].ToString());
                             }
                         }
                     }
@@ -142,7 +175,7 @@ namespace POS_System
                                 }
 
                                 string insertSql = "INSERT INTO Products VALUES" +
-                                    "(@prod_id,@prod_name,@category,@price,@stock,@image_data,@status,@date_insert)";
+                                    "(@prod_id,@prod_name,@category,@price,@stock,@image_data,@status,@date_insert,@supplier_name)";
                                 using (SqlCommand insertCmd = new SqlCommand(insertSql, connect))
                                 {
                                     insertCmd.Parameters.AddWithValue("@prod_id", txtId_AddProd.Text.Trim());
@@ -152,6 +185,7 @@ namespace POS_System
                                     insertCmd.Parameters.AddWithValue("@stock", txtStock_AddProd.Text.Trim());
                                     insertCmd.Parameters.AddWithValue("@image_data", imageBytes);
                                     insertCmd.Parameters.AddWithValue("@status", cbxStatus_AddProd.SelectedItem);
+                                    insertCmd.Parameters.AddWithValue("@supplier_name", cbxSupplier.SelectedItem);
 
                                     DateTime today = DateTime.Today;
                                     insertCmd.Parameters.AddWithValue("@date_insert", today);
@@ -191,6 +225,7 @@ namespace POS_System
             txtStock_AddProd.Clear();
             cbxCate_AddProd.SelectedIndex = -1;
             cbxStatus_AddProd.SelectedIndex = -1;
+            cbxSupplier.SelectedIndex = -1;
             pbxImage_AddProd.Image = null;
             txtId_AddProd.Focus();
 
@@ -300,7 +335,7 @@ namespace POS_System
 
                             // Cập nhật dữ liệu
                             string updateSql = "UPDATE Products SET prod_id=@prod_id, prod_name=@prod_name, category=@category, price=@price, " +
-                                                "stock=@stock, image_data=@image_data, status=@status WHERE id=@id";
+                                                "stock=@stock, image_data=@image_data, status=@status,supplier_name=@sup_name WHERE id=@id";
 
                             using (SqlCommand updateCmd = new SqlCommand(updateSql, connect))
                             {
@@ -311,6 +346,7 @@ namespace POS_System
                                 updateCmd.Parameters.AddWithValue("@stock", txtStock_AddProd.Text.Trim());
                                 updateCmd.Parameters.AddWithValue("@image_data", imageBytes);
                                 updateCmd.Parameters.AddWithValue("@status", cbxStatus_AddProd.SelectedItem);
+                                updateCmd.Parameters.AddWithValue("@sup_name", cbxSupplier.SelectedItem);
                                 updateCmd.Parameters.AddWithValue("@id", getID);
 
                                 updateCmd.ExecuteNonQuery();
@@ -375,6 +411,8 @@ namespace POS_System
                 }
             }
         }
+
+
     }
 }
 

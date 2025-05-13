@@ -26,7 +26,7 @@ namespace POS_System
                 return false;
         }
 
-        private void displaySupplier()
+        public void displaySupplier()
         {
             Supplier supplier = new Supplier();
 
@@ -221,6 +221,15 @@ namespace POS_System
                     connect.Close();
                 }
             }
+        }
+
+        private void txtSearch_Supplier_TextChanged(object sender, EventArgs e)
+        {
+            Supplier supplier = new Supplier();
+
+            List<Supplier> suppliers = supplier.SearchSuppliers(txtSearch_Supplier.Text.Trim());
+
+            dgvSuppliers.DataSource = suppliers;
         }
     }
 }

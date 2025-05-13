@@ -36,6 +36,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.centerPanel = new System.Windows.Forms.Panel();
+            this.btnPurchase = new Guna.UI2.WinForms.Guna2Button();
             this.btnSuppliers = new Guna.UI2.WinForms.Guna2Button();
             this.btnStatistics = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
@@ -87,6 +88,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderRadius = 60;
+            this.guna2Panel2.Controls.Add(this.btnPurchase);
             this.guna2Panel2.Controls.Add(this.btnSuppliers);
             this.guna2Panel2.Controls.Add(this.btnStatistics);
             this.guna2Panel2.Controls.Add(this.btnLogout);
@@ -149,6 +151,29 @@
             this.centerPanel.Size = new System.Drawing.Size(1000, 685);
             this.centerPanel.TabIndex = 7;
             // 
+            // btnPurchase
+            // 
+            this.btnPurchase.Animated = true;
+            this.btnPurchase.AutoRoundedCorners = true;
+            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.btnPurchase.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnPurchase.CheckedState.FillColor = System.Drawing.Color.RoyalBlue;
+            this.btnPurchase.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPurchase.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPurchase.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPurchase.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPurchase.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Image = global::POS_System.Properties.Resources.purchase;
+            this.btnPurchase.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPurchase.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPurchase.Location = new System.Drawing.Point(17, 272);
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(180, 45);
+            this.btnPurchase.TabIndex = 12;
+            this.btnPurchase.Text = "Purchase";
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
+            // 
             // btnSuppliers
             // 
             this.btnSuppliers.Animated = true;
@@ -165,7 +190,7 @@
             this.btnSuppliers.Image = global::POS_System.Properties.Resources.Supplier;
             this.btnSuppliers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSuppliers.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnSuppliers.Location = new System.Drawing.Point(17, 336);
+            this.btnSuppliers.Location = new System.Drawing.Point(17, 351);
             this.btnSuppliers.Name = "btnSuppliers";
             this.btnSuppliers.Size = new System.Drawing.Size(180, 45);
             this.btnSuppliers.TabIndex = 11;
@@ -188,7 +213,7 @@
             this.btnStatistics.Image = global::POS_System.Properties.Resources.stat;
             this.btnStatistics.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStatistics.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnStatistics.Location = new System.Drawing.Point(17, 438);
+            this.btnStatistics.Location = new System.Drawing.Point(17, 435);
             this.btnStatistics.Name = "btnStatistics";
             this.btnStatistics.Size = new System.Drawing.Size(180, 45);
             this.btnStatistics.TabIndex = 10;
@@ -233,7 +258,7 @@
             this.btnUsers.Image = global::POS_System.Properties.Resources.User;
             this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUsers.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUsers.Location = new System.Drawing.Point(17, 387);
+            this.btnUsers.Location = new System.Drawing.Point(17, 393);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(180, 45);
             this.btnUsers.TabIndex = 8;
@@ -256,7 +281,7 @@
             this.btnCus.Image = global::POS_System.Properties.Resources.cus1;
             this.btnCus.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCus.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCus.Location = new System.Drawing.Point(17, 285);
+            this.btnCus.Location = new System.Drawing.Point(17, 310);
             this.btnCus.Name = "btnCus";
             this.btnCus.Size = new System.Drawing.Size(180, 45);
             this.btnCus.TabIndex = 6;
@@ -280,7 +305,7 @@
             this.btnCategories.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCategories.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnCategories.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnCategories.Location = new System.Drawing.Point(17, 183);
+            this.btnCategories.Location = new System.Drawing.Point(17, 191);
             this.btnCategories.Name = "btnCategories";
             this.btnCategories.Size = new System.Drawing.Size(180, 45);
             this.btnCategories.TabIndex = 4;
@@ -303,7 +328,7 @@
             this.btnProducts.Image = global::POS_System.Properties.Resources.product;
             this.btnProducts.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProducts.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnProducts.Location = new System.Drawing.Point(17, 234);
+            this.btnProducts.Location = new System.Drawing.Point(17, 231);
             this.btnProducts.Name = "btnProducts";
             this.btnProducts.Size = new System.Drawing.Size(180, 45);
             this.btnProducts.TabIndex = 3;
@@ -328,7 +353,7 @@
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.ImageOffset = new System.Drawing.Point(5, 0);
             this.btnHome.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHome.Location = new System.Drawing.Point(17, 132);
+            this.btnHome.Location = new System.Drawing.Point(17, 151);
             this.btnHome.Name = "btnHome";
             this.btnHome.PressedColor = System.Drawing.Color.White;
             this.btnHome.Size = new System.Drawing.Size(180, 45);
@@ -388,5 +413,6 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnStatistics;
         private Guna.UI2.WinForms.Guna2Button btnSuppliers;
+        private Guna.UI2.WinForms.Guna2Button btnPurchase;
     }
 }

@@ -18,6 +18,7 @@ namespace POS_System
         public byte[] Image_data { get; set; }
         public string Status { get; set; }
         public string Date_insert { get; set; }
+        public string Supplier_name { get; set; }
 
 
         public List<Product> GetAllProducts()
@@ -49,6 +50,7 @@ namespace POS_System
                         product.Image_data = reader["image_data"] as byte[];
                         product.Status = reader["status"].ToString();
                         product.Date_insert = reader["date_insert"].ToString();
+                        product.Supplier_name = reader["supplier_name"].ToString();
 
                         products.Add(product);
                     }

@@ -39,5 +39,37 @@ namespace POS_System
             }
             return suppliers;
         }
+
+        public List<Supplier> SearchSuppliers(string keyword)
+        {
+            List<Supplier> suppliers = new List<Supplier>();
+
+            SqlConnection connect = new SqlConnection("Data Source=DESKTOP-QG4RJGH\\SQLEXPRESS01;Initial Catalog=Inventory;Integrated Security=True");
+
+            using (connect)
+            {
+                connect.Open();
+
+                string selectSql = "SELECT * FROM Suppliers WHERE name LIKE @keyword OR address LIKE @keyword";
+
+                using (SqlCommand cmd = new SqlCommand(selectSql, connect))
+                {
+                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Supplier supplier = new Supplier();
+                        supplier.Id = (int)reader["id"];
+                        supplier.Name = reader["name"].ToString();
+                        supplier.Address = reader["address"].ToString();
+                        supplier.DateJoin = reader["date_join"].ToString();
+
+                        suppliers.Add(supplier);
+                    }
+                }
+            }
+            return suppliers;
+        }
     }
 }

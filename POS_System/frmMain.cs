@@ -82,5 +82,10 @@ namespace POS_System
         {
             AddForm(new frmSupplier());
         }
+
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+            AddForm(new frmPurchase());
+        }
     }
 }

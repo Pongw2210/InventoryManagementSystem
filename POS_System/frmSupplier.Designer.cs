@@ -305,6 +305,7 @@
             this.txtSearch_Supplier.SelectedText = "";
             this.txtSearch_Supplier.Size = new System.Drawing.Size(272, 44);
             this.txtSearch_Supplier.TabIndex = 15;
+            this.txtSearch_Supplier.TextChanged += new System.EventHandler(this.txtSearch_Supplier_TextChanged);
             // 
             // frmSupplier
             // 

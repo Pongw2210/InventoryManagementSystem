@@ -52,6 +52,8 @@
             this.txtId_AddProd = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbxSupplier = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvProds = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +65,7 @@
             this.image = new System.Windows.Forms.DataGridViewImageColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sup_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch_AddProd = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3.SuspendLayout();
@@ -120,7 +123,7 @@
             this.btnClear_AddProd.FillColor = System.Drawing.Color.Gold;
             this.btnClear_AddProd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnClear_AddProd.ForeColor = System.Drawing.Color.White;
-            this.btnClear_AddProd.Location = new System.Drawing.Point(590, 194);
+            this.btnClear_AddProd.Location = new System.Drawing.Point(594, 229);
             this.btnClear_AddProd.Name = "btnClear_AddProd";
             this.btnClear_AddProd.Size = new System.Drawing.Size(128, 45);
             this.btnClear_AddProd.TabIndex = 19;
@@ -138,7 +141,7 @@
             this.btnUpdate_AddProd.FillColor = System.Drawing.Color.LimeGreen;
             this.btnUpdate_AddProd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnUpdate_AddProd.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate_AddProd.Location = new System.Drawing.Point(211, 194);
+            this.btnUpdate_AddProd.Location = new System.Drawing.Point(215, 229);
             this.btnUpdate_AddProd.Name = "btnUpdate_AddProd";
             this.btnUpdate_AddProd.Size = new System.Drawing.Size(128, 45);
             this.btnUpdate_AddProd.TabIndex = 18;
@@ -156,7 +159,7 @@
             this.btnRemove_AddProd.FillColor = System.Drawing.Color.Crimson;
             this.btnRemove_AddProd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRemove_AddProd.ForeColor = System.Drawing.Color.White;
-            this.btnRemove_AddProd.Location = new System.Drawing.Point(395, 194);
+            this.btnRemove_AddProd.Location = new System.Drawing.Point(399, 229);
             this.btnRemove_AddProd.Name = "btnRemove_AddProd";
             this.btnRemove_AddProd.Size = new System.Drawing.Size(128, 45);
             this.btnRemove_AddProd.TabIndex = 17;
@@ -173,7 +176,7 @@
             this.btnAdd_AddProd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAdd_AddProd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnAdd_AddProd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd_AddProd.Location = new System.Drawing.Point(30, 194);
+            this.btnAdd_AddProd.Location = new System.Drawing.Point(34, 229);
             this.btnAdd_AddProd.Name = "btnAdd_AddProd";
             this.btnAdd_AddProd.Size = new System.Drawing.Size(128, 45);
             this.btnAdd_AddProd.TabIndex = 16;
@@ -360,6 +363,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.cbxSupplier);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.btnImport_AddProd);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btnClear_AddProd);
@@ -378,10 +383,35 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txtId_AddProd);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 350);
+            this.panel2.Location = new System.Drawing.Point(12, 307);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(976, 323);
+            this.panel2.Size = new System.Drawing.Size(976, 366);
             this.panel2.TabIndex = 3;
+            // 
+            // cbxSupplier
+            // 
+            this.cbxSupplier.AutoRoundedCorners = true;
+            this.cbxSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.cbxSupplier.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbxSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxSupplier.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxSupplier.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbxSupplier.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbxSupplier.ForeColor = System.Drawing.Color.Black;
+            this.cbxSupplier.ItemHeight = 30;
+            this.cbxSupplier.Location = new System.Drawing.Point(145, 152);
+            this.cbxSupplier.Name = "cbxSupplier";
+            this.cbxSupplier.Size = new System.Drawing.Size(209, 36);
+            this.cbxSupplier.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(50, 152);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 28);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Supplier:";
             // 
             // label5
             // 
@@ -417,7 +447,8 @@
             this.stock,
             this.image,
             this.status,
-            this.date});
+            this.date,
+            this.sup_name});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -441,7 +472,7 @@
             this.dgvProds.RowHeadersVisible = false;
             this.dgvProds.RowHeadersWidth = 62;
             this.dgvProds.RowTemplate.Height = 28;
-            this.dgvProds.Size = new System.Drawing.Size(970, 250);
+            this.dgvProds.Size = new System.Drawing.Size(970, 222);
             this.dgvProds.TabIndex = 14;
             this.dgvProds.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvProds.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -540,6 +571,14 @@
             this.date.Name = "date";
             this.date.ReadOnly = true;
             // 
+            // sup_name
+            // 
+            this.sup_name.DataPropertyName = "supplier_name";
+            this.sup_name.HeaderText = "Sup_Name";
+            this.sup_name.MinimumWidth = 8;
+            this.sup_name.Name = "sup_name";
+            this.sup_name.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -548,7 +587,7 @@
             this.panel1.Controls.Add(this.dgvProds);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 332);
+            this.panel1.Size = new System.Drawing.Size(976, 289);
             this.panel1.TabIndex = 2;
             // 
             // txtSearch_AddProd
@@ -621,6 +660,8 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvProds;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch_AddProd;
+        private Guna.UI2.WinForms.Guna2ComboBox cbxSupplier;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn prod_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn prod_name;
@@ -630,5 +671,6 @@
         private System.Windows.Forms.DataGridViewImageColumn image;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sup_name;
     }
 }
