@@ -218,5 +218,12 @@ namespace POS_System
                 }
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            Purchase purchase = new Purchase();
+            List<Purchase> purchases = purchase.SearchPurchases(txtSearch.Text);
+            dgvPurchases.DataSource = purchases;
+        }
     }
 }

@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\Users\\Bong\\LTCSDL\\POS_System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|d:\\users\\bong\\ltcsdl\\pos_system\\pos_system\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\frmaddproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|d:\\users\\bong\\ltcsdl\\pos_system\\pos_system\\frmpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\frmpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|d:\\users\\bong\\ltcsdl\\pos_system\\pos_system\\frmpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|D:\\Users\\Bong\\LTCSDL\\POS_System\\pos_system\\frmpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\frmpurchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|D:\\Users\\Bong\\LTCSDL\\POS_System\\pos_system\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|D:\\Users\\Bong\\LTCSDL\\POS_System\\pos_system\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1AE29D04-D6E0-4D1A-B7EA-CD0045DC9346}|POS_System\\POS_System.csproj|solutionrelative:pos_system\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +35,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmAddProduct.cs [Design]",
+              "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmAddProduct.cs",
+              "RelativeDocumentMoniker": "POS_System\\frmAddProduct.cs",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmAddProduct.cs [Design]",
+              "RelativeToolTip": "POS_System\\frmAddProduct.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T12:16:56.848Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Purchase.cs",
+              "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\Purchase.cs",
+              "RelativeDocumentMoniker": "POS_System\\Purchase.cs",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\Purchase.cs",
+              "RelativeToolTip": "POS_System\\Purchase.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAiwE8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T04:06:23.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\Product.cs",
+              "RelativeDocumentMoniker": "POS_System\\Product.cs",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\Product.cs",
+              "RelativeToolTip": "POS_System\\Product.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwv2IAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T04:05:58.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmPurchase.cs",
               "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmPurchase.cs",
               "RelativeDocumentMoniker": "POS_System\\frmPurchase.cs",
-              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmPurchase.cs*",
-              "RelativeToolTip": "POS_System\\frmPurchase.cs*",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAhwJUAAABjAAAAAAAAAA==",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmPurchase.cs",
+              "RelativeToolTip": "POS_System\\frmPurchase.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAADwv90AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-13T11:39:34.239Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "frmPurchase.cs [Design]",
               "DocumentMoniker": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmPurchase.cs",
               "RelativeDocumentMoniker": "POS_System\\frmPurchase.cs",
-              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmPurchase.cs [Design]*",
-              "RelativeToolTip": "POS_System\\frmPurchase.cs [Design]*",
+              "ToolTip": "D:\\Users\\Bong\\LTCSDL\\POS_System\\POS_System\\frmPurchase.cs [Design]",
+              "RelativeToolTip": "POS_System\\frmPurchase.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T09:03:34.104Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-13T09:03:34.104Z"
             }
           ]
         }
